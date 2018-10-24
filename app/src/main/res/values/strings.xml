@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="arc_bottom_text">BATTERY</string>
+    <string name="txt_forcasts">Forcasts</string>
+</resources>

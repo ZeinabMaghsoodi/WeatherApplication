@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center|left"
+    android:background="@drawable/bluesky"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:paddingTop="12dp">
+
+        <RelativeLayout
+            android:layout_width="210dp"
+            android:layout_height="200dp"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layoutTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_below="@+id/txtDate"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp">
+
+                <ImageView
+                    android:id="@+id/imageMain"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="15dp" />
+
+                <TextView
+                    android:id="@+id/txtDegree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/textColor"
+                    android:textSize="45sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layoutTemp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="15dp"
+                android:textColor="@color/textColor"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <com.github.lzyzsd.circleprogress.ArcProgress
+            android:id="@+id/arc_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:theme="@style/Base.ThemeOverlay.AppCompat.Dark"
+            app:arc_bottom_text="@string/arc_bottom_text"
+            app:arc_text_color="@color/textColor" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtForcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutMain"
+        android:layout_marginTop="12dp"
+        android:gravity="center|left"
+        android:text="@string/txt_forcasts"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listViewForcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtForcast" />
+
+</RelativeLayout>
